@@ -14,8 +14,12 @@ class Source {
         int id; // Source ID 
 
     public:
-        // Default constructors 
+        // Constructors
         Source();
+
+        Source(std::string type, std::string date, double activity, int id);
+
+        // Descrutctor
         ~Source(); 
 
         // Member functions allowing us to interact with the object

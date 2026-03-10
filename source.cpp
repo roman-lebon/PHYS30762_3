@@ -1,13 +1,21 @@
 #include "source.h"
 #include <iostream>
 
-// Default constructor 
+// Constructors
 Source::Source() {
     
     type = "Unknown";
     date = "Unknown";
     activity = 0.0;
     id = 0;
+}
+
+Source::Source(std::string t, std::string d, double a, int i) {
+
+    type = t;
+    date = d;
+    activity = a;
+    id = i;
 }
 
 // Destructor 
