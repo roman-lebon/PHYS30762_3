@@ -1,8 +1,11 @@
 #include <iostream>
+#include "source.h"
 
 int main() {
 
-    std::cout << "Program started successfully." << std::endl;
+    Source s1;
+
+    s1.print_source();
 
     return 0;
 }

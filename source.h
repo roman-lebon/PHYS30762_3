@@ -20,7 +20,7 @@ class Source {
 
         // Member functions allowing us to interact with the object
 
-        void printSource();
+        void print_source();
 };       
 
 #endif 
