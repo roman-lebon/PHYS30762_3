@@ -23,8 +23,20 @@ class Source {
         ~Source(); 
 
         // Member functions allowing us to interact with the object
-
         void print_source();
+
+        // Getters
+        std::string get_type();
+        std::string get_date();
+        double get_activity();
+        int get_id();
+
+        // Setters
+        void set_type(std::string t);
+        void set_date(std::string d);
+        void set_activity(double a);
+        void set_id(int i);
+
 };       
 
 #endif 

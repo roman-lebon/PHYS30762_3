@@ -30,5 +30,41 @@ void Source::print_source() {
     std::cout << "Activity: " << activity << "\n";
     std::cout << "Source ID: " << id << "\n";
 
+
 }
+
+// Getters
+std::string Source::get_type() {
+    return type;
+}
+
+std::string Source::get_date() {
+    return date;
+}
+
+double Source::get_activity() {
+    return activity;
+}
+
+int Source::get_id() {
+    return id;
+}
+
+// Setters
+void Source::set_type(std::string t) {
+    type = t;
+}
+
+void Source::set_date(std::string d) {
+    date = d;
+}
+
+void Source::set_activity(double a) {
+    activity = a;
+}
+
+void Source::set_id(int i) {
+    id = i;
+}
+
 
