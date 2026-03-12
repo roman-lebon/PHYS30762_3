@@ -93,14 +93,14 @@ void Source::set_type(std::string t) {
     }
     
     // Program exits if not 
-    std::cout << "\n-> Invalid source type: " << t << ". Please check config file.\n";
+    std::cout << "-> Invalid source type: " << t << ". Please check config file.";
     exit(1);
 }
 
 void Source::set_date(std::string d) {
     // Validates a date exists
     if (d.empty()) {
-        std::cout << "\n-> Invalid input. Date cannot be empty.\n";
+        std::cout << "-> Invalid date, must not be empty. Please check config file.";
         exit(1);
     }
 
@@ -110,7 +110,7 @@ void Source::set_date(std::string d) {
 void Source::set_activity(double a) {
     // Validates activity is non-negative 
     if (a < 0) {
-        std::cout <<"\n-> Invalid input. Activity must be >= 0.\n";
+        std::cout <<"\n-> Invalid activity, must be >= 0. Please check config file.";
         exit(1);
     }
 
@@ -120,7 +120,7 @@ void Source::set_activity(double a) {
 void Source::set_id(int i) {
     // Validates ID is non-negative
     if (i < 0) {
-        std::cout <<"\n-> Invalid input. ID must be >= 0.\n";
+        std::cout <<"-> Invalid ID, must be >= 0. Please check config file.";
         exit(1);
     }
 

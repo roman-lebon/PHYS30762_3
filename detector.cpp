@@ -64,7 +64,7 @@ void Detector::set_type(std::string t) {
     }
     
     // Program exits if not 
-    std::cout << "\n-> Invalid detector type: " << t << ". Please check config file.\n";
+    std::cout << "-> Invalid detector type: " << t << ". Please check config file.\n";
     exit(1);
 }
 
