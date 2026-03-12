@@ -7,10 +7,10 @@
 const std::vector<std::string> valid_detectors {
     "Scintillator",
     "Geiger",
-    "Germanium detector",
-    "Silicon detector",
-    "Proportional counter",
-    "Ionisation chamber"
+    "Germanium_detector",
+    "Silicon_detector",
+    "Proportional_counter",
+    "Ionisation_chamber"
 };
 
 // Constructors
@@ -73,7 +73,7 @@ void Detector::set_status(bool s) {
     status = s;
 }
 
-int Detector::detect(Source s) {
+int Detector::detect(const Source& s) {
 
     if (!status) {
         std::cout << "\n-> Detector is OFF, Unable to measure source.\n";

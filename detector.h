@@ -33,7 +33,7 @@ class Detector {
         // Setters
         void set_type(std::string t);
         void set_status(bool s);
-        int detect(Source s); // Takes a source object as input returning number of counts (doesnt work if detector is off)
+        int detect(const Source& s); // Takes a source object as input returning number of counts (doesnt work if detector is off)
 };       
 
 #endif 
