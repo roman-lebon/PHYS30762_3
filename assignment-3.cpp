@@ -55,12 +55,16 @@ int main() {
     // Loop through all sources for each detector and output corresponding information
     for (Detector& d : detectors) {
         for (Source& s : sources) {
+
             d.detect(s);
-            std::cout << "\n-----\n";
+            std::cout << "\n-------------------------------------------------------------------------------\n";
             s.print_source();
             std::cout << "\n";
             d.print_detector();
-            std::cout << "-----";
+            if (!d.get_status()) {
+                std::cout << " (Source " << s.get_type() << " could not be measured as the detector is switched off)";
+            }
+            std::cout << "\n-------------------------------------------------------------------------------";
         }
     }
 

@@ -37,7 +37,7 @@ void Detector::print_detector() {
     std::cout << "Detector Information:\n";
     std::cout << "Type: " << type << "\n";
     std::cout << "Status: " << (status ? "ON" : "OFF")  << "\n"; // Ternary operator outputs "ON"/"OFF" if status is true/false
-    std::cout << "Counts: " << counts << "\n";
+    std::cout << "Counts: " << counts;
 }
 
 // Getters
@@ -76,7 +76,6 @@ void Detector::set_status(bool s) {
 int Detector::detect(const Source& s) {
 
     if (!status) {
-        std::cout << "\n-> Detector is OFF, Unable to measure source.\n";
         return 0;
     }
 
