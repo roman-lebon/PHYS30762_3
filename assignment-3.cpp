@@ -43,13 +43,18 @@ int main() {
             sources.emplace_back(type, date, activity, id); // Creates a Source object and stores in source vector
         }
 
-        if (tag == "DETECTOR") {
+        else if (tag == "DETECTOR") {
             std::string type;
             int status;
 
             ss >> type >> status;
             detectors.emplace_back(type, status);
         } 
+
+        else {
+            std::cout << "\n-> Unknown config entry: " << tag << "\n";
+            return 1;
+        }
     }
 
     // Loop through all sources for each detector and output corresponding information
