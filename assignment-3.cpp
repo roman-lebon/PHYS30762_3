@@ -1,8 +1,12 @@
 #include <iostream>
 #include "source.h"
 #include "detector.h"
+#include <cstdlib> 
+#include <ctime>
 
 int main() {
+
+    srand(time(0)); // Ensures each run similuates a new measurement
 
     Source s1("Na-22", "2024-01-01", 1200, 1);
 
