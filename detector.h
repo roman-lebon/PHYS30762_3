@@ -17,7 +17,7 @@ class Detector {
         // Constructors
         Detector();
 
-        Detector(std::string type, bool status, int counts);
+        Detector(std::string type, bool status);
 
         // Descrutctor
         ~Detector(); 

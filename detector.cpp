@@ -1,6 +1,17 @@
 #include "detector.h"
 #include <iostream>
 #include <cstdlib>
+#include <vector>
+
+// Vector containing allowed detectors
+const std::vector<std::string> valid_detectors {
+    "Scintillator",
+    "Geiger",
+    "Germanium detector",
+    "Silicon detector",
+    "Proportional counter",
+    "Ionisation chamber"
+};
 
 // Constructors
 Detector::Detector() {
@@ -10,11 +21,11 @@ Detector::Detector() {
     counts = 0;
 }
 
-Detector::Detector(std::string t, bool s, int c) {
+Detector::Detector(std::string t, bool s) {
 
     set_type(t);
     set_status(s);
-    counts = c;
+    counts = 0;
 }
 
 // Destructor 
@@ -44,7 +55,18 @@ int Detector::get_counts() {
 
 // Setters
 void Detector::set_type(std::string t) {
-    type = t;
+    
+    // Validation loop checks if detectors are in the accepted list
+    for (const std::string& d : valid_detectors) {
+        if (d == t) {
+            type = t;
+            return;
+        }
+    }
+    
+    // Program exits if not 
+    std::cout << "\n-> Invalid detector type: " << t << ". Please check config file.\n";
+    exit(1);
 }
 
 void Detector::set_status(bool s) {
@@ -58,6 +80,6 @@ int Detector::detect(Source s) {
         return 0;
     }
 
-    counts = rand() % 100;
+    counts = rand() % 1000;
     return counts;
 }
