@@ -3,5 +3,3 @@ SOURCE Na-22 2023-12-10 20.0 2
 SOURCE Co-60 2022-06-15 75.0 3
 
 DETECTOR Geiger 1
-DETECTOR Scintillator 1
-DETECTOR Germanium_detector 0

@@ -36,8 +36,7 @@ void Detector::print_detector() {
 
     std::cout << "Detector Information:\n";
     std::cout << "Type: " << type << "\n";
-    std::cout << "Status: " << (status ? "ON" : "OFF")  << "\n"; // Ternary operator outputs "ON"/"OFF" if status is true/false
-    std::cout << "Counts: " << counts;
+    std::cout << "Status: " << (status ? "ON" : "OFF"); // Ternary operator outputs "ON"/"OFF" if status is true/false
 }
 
 // Getters
