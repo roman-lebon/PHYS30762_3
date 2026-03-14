@@ -99,7 +99,15 @@ int main() {
                 return 1;
             }
 
-        sources.emplace_back(type, date, activity, id); // Creates a Source object and stores in source vector
+            // Ensure source ID is unique
+            for (const Source& s : sources) {
+                if (s.get_id() == id) {
+                    std::cout << "-> Duplicate source ID: " << id << ". IDs must be unique.";
+                    return 1;
+                }
+            }
+
+            sources.emplace_back(type, date, activity, id); // Creates a Source object and stores in source vector
         }
 
         else if (tag == "DETECTOR") {
@@ -113,7 +121,7 @@ int main() {
 
             std::string extra;
             if (ss >> extra) {
-                std::cout << "-> Unexpected data in SOURCE line: " << extra;
+                std::cout << "-> Unexpected data in DETECTOR line: " << extra;
                 return 1;
             }
 

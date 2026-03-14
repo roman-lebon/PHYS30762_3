@@ -40,15 +40,15 @@ void Detector::print_detector() {
 }
 
 // Getters
-std::string Detector::get_type() {
+std::string Detector::get_type() const{
     return type;
 }
 
-bool Detector::get_status() {
+bool Detector::get_status() const{
     return status;
 }
 
-int Detector::get_counts() {
+int Detector::get_counts() const{
     return counts;
 }
 

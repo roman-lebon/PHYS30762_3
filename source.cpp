@@ -65,19 +65,19 @@ void Source::print_source() {
 }
 
 // Getters
-std::string Source::get_type() {
+std::string Source::get_type() const{
     return type;
 }
 
-std::string Source::get_date() {
+std::string Source::get_date() const{
     return date;
 }
 
-double Source::get_activity() {
+double Source::get_activity() const{
     return activity;
 }
 
-int Source::get_id() {
+int Source::get_id() const{
     return id;
 }
 

@@ -26,9 +26,9 @@ class Detector {
         void print_detector();
 
         // Getters
-        std::string get_type();
-        bool get_status();
-        int get_counts();
+        std::string get_type() const;
+        bool get_status() const;
+        int get_counts() const;
 
         // Setters
         void set_type(std::string t);

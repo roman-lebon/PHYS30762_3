@@ -26,10 +26,10 @@ class Source {
         void print_source();
 
         // Getters
-        std::string get_type();
-        std::string get_date();
-        double get_activity();
-        int get_id();
+        std::string get_type() const;
+        std::string get_date() const;
+        double get_activity() const;
+        int get_id() const;
 
         // Setters
         void set_type(std::string t);
