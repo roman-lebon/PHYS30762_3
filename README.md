@@ -116,7 +116,7 @@ assignment-3.cpp
 
 ### Source Class
 
-The `Source` class represents a radioactive source used in the experiment
+The `Source` class represents a radioactive source used in the experiment.
 
 Data members:
 
@@ -264,6 +264,7 @@ The program terminates safely in the following cases:
 - Negative activity values
 - Invalid detector status
 - Missing source or detector entries
+- Duplicate source identifiers
 
 Graceful termination is performed using:
 
@@ -305,6 +306,7 @@ The program was developed incrementally, with features committed separately to G
 10. Added loops to iterate over all sources and detectors.
 11. Improved output formatting and error messages.
 12. Tested program behaviour with valid and invalid configuration files.
+13. Added validation to ensure that source identifiers in the configuration file are unique.
 
 Each stage corresponds to one or more commits in the Git history.
 
